@@ -14,15 +14,15 @@ RUN echo "${SSH_PRIVATE_KEY}" > /root/.ssh/id_rsa
 # RUN ssh-keyscan bitbucket.org >> /root/.ssh/known_hosts
 
 
-RUN echo "Cloning repo: key::019 " && \
+RUN echo "Cloning repo: key::000 " && \
         git --exec-path && \
-        git clone https://github.com/tpublic/mkiii.git && \
+        git clone https://github.com/tpublic/x.git && \
         mv mkiii microkube && \
         find microkube/*
 
 
 
-FROM docker.bluelight.limited:5000/bluelightltd/microkube-bundler-image:latest
+FROM docker.bluelight.limited:5000/bluelightltd/mkiii-bundler-image:latest
 
 RUN mkdir -p /home/app/microkube
 
