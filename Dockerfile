@@ -16,7 +16,7 @@ RUN echo "${SSH_PRIVATE_KEY}" > /root/.ssh/id_rsa
 
 RUN echo "Cloning repo: key::001 " && \
         git --exec-path && \
-        git clone https://github.com/tpublic/x.git && \
+        git clone https://github.com/tpublic/xx.git && \
         mv x microkube && \
         find microkube/*
 
